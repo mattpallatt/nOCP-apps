@@ -4,10 +4,10 @@ Reference apps for building against the **nOCP** contract — a small, spec-base
 
 Two apps live here, side by side:
 
-- **[`base/`](base/)** — the full reference implementation: a live-editable settings page, DynamoDB-backed persistence, bespoke app-icon upload, a webhook receiver with an admin listing view. Start here if you want the complete pattern, or to see a real implementation of every optional piece of the spec.
+- **[`nocp-widget/`](nocp-widget/)** — the full reference implementation: a live-editable settings page, DynamoDB-backed persistence, bespoke app-icon upload, a webhook receiver with an admin listing view. Start here if you want the complete pattern, or to see a real implementation of every optional piece of the spec.
 - **[`starter/`](starter/)** — the minimum set of files needed to build a new nOCP app from scratch, with no runtime-configurable settings and no cloud account required to try it locally. Start here if you're building something simple, or want to pick your own persistence/host from day one.
 
-Both deploy the same way: one AWS Lambda behind a public Function URL, no API Gateway, no server to manage, free within Lambda's (and, for `base/`, DynamoDB's) always-free tier. Each has its own README with a quick-start.
+Both deploy the same way: one AWS Lambda behind a public Function URL, no API Gateway, no server to manage, free within Lambda's (and, for `nocp-widget/`, DynamoDB's) always-free tier. Each has its own README with a quick-start.
 
 ## The contract, in short
 
@@ -21,7 +21,7 @@ An embeddable app needs to:
 6. Expose `POST /nocp/webhook`, open at the route level — the caller is some external service with its own auth scheme, so a shared secret in front would just conflict with it.
 7. *(Optional, but recommended)* Expose `GET /nocp/meta` (`{specVersion, name, displayMode, hasIcon}`) and, if `hasIcon` is true, `GET /nocp/icon` — so the extension picks up the app's real name/icon/display mode automatically instead of it being hand-typed into the extension's own settings. Both need `Access-Control-Allow-Origin: *`, since the extension reads them via a plain cross-origin `fetch()`.
 
-Both apps here implement 1–4 and 6 in full; `base/` implements 5 and 7 completely (including the icon upload); `starter/` implements 5 and a `hasIcon: false` version of 7 (it has nowhere to persist an uploaded icon — see its own README for exactly what would need to be added back).
+Both apps here implement 1–4 and 6 in full; `nocp-widget/` implements 5 and 7 completely (including the icon upload); `starter/` implements 5 and a `hasIcon: false` version of 7 (it has nowhere to persist an uploaded icon — see its own README for exactly what would need to be added back).
 
 ## A note on the extension side
 
