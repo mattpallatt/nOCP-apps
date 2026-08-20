@@ -9,7 +9,7 @@
 #
 # Both bundle src/widget.ts (the client-side widget) to dist/widget.txt
 # first, then inline it into whichever adapter via esbuild's text loader —
-# same pattern as the full nocp-widget app one directory up.
+# same pattern as the full nOCP-widget app one directory up.
 #
 set -euo pipefail
 

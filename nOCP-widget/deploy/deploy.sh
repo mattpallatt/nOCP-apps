@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# One-command deploy of nocp-widget to AWS Lambda behind a public Function
+# One-command deploy of nOCP-widget to AWS Lambda behind a public Function
 # URL — no API Gateway, no CloudFront, no S3. The Lambda itself renders the
 # gated HTML page, same as reqcatch's Program.cs does today. Free within
 # Lambda's always-free tier (1M requests + 400,000 GB-seconds/month).

@@ -1,4 +1,4 @@
-# nocp-widget
+# nOCP-widget
 
 The nOCP embedded widget (previously `reqCatch/nOCP`), hosted standalone on
 AWS instead of inside reqcatch's ASP.NET Core app. reqcatch itself stays on

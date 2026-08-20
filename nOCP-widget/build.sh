@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Builds the nocp-widget Lambda deployment package:
+# Builds the nOCP-widget Lambda deployment package:
 #   1. Bundles src/widget.ts and src/admin.ts (both client-side — the gated
 #      widget and the settings/admin page, respectively) to single minified
 #      JS strings.

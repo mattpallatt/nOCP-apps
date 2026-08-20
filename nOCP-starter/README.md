@@ -2,7 +2,7 @@
 
 The minimum set of files needed to build a new nOCP app from scratch — an app the nOCP Chrome extension can embed in Optimizely's SaaS CMS sidebar. Copy this folder out and start from here.
 
-This is deliberately the small starting point, not the fuller reference — that fuller app, `nocp-widget`, isn't included in this folder (this is meant to be copied out and distributed on its own), so nothing below assumes you have it. Where it's mentioned, it's just for context on what a more complete nOCP app looks like: a live-editable settings page, DynamoDB-backed persistence for it, bespoke app-icon upload, a `GET /admin/webhooks` listing. This starter has none of that (frame token and title are plain env vars, no admin surface at all). See "Deliberately not included" below for what that specifically means for the admin surface.
+This is deliberately the small starting point, not the fuller reference — that fuller app, `nOCP-widget`, isn't included in this folder (this is meant to be copied out and distributed on its own), so nothing below assumes you have it. Where it's mentioned, it's just for context on what a more complete nOCP app looks like: a live-editable settings page, DynamoDB-backed persistence for it, bespoke app-icon upload, a `GET /admin/webhooks` listing. This starter has none of that (frame token and title are plain env vars, no admin surface at all). See "Deliberately not included" below for what that specifically means for the admin surface.
 
 ## Quick start
 
@@ -51,7 +51,7 @@ The full contract lives in `NOCP_APP_SPEC.md`, published alongside the nOCP Chro
 
 ## Deploying to AWS Lambda
 
-The same shape as `nocp-widget` — one Lambda behind a public Function URL, no API Gateway, no database:
+The same shape as `nOCP-widget` — one Lambda behind a public Function URL, no API Gateway, no database:
 
 ```bash
 NOCP_FRAME_TOKEN=$(openssl rand -hex 32) ./deploy/deploy.sh

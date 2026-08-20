@@ -78,8 +78,8 @@ export function createApp(config: AppConfig, store: WebhookStore) {
     // is already the only piece of this app's identity that exists (no
     // settings page in this starter — see README), so /nocp/meta just
     // echoes it. hasIcon is always false: this minimal template has no
-    // persistence to upload one into (nocp-widget's settings-page pattern
-    // is what adds that back — see "What's different from nocp-widget"),
+    // persistence to upload one into (nOCP-widget's settings-page pattern
+    // is what adds that back — see "What's different from nOCP-widget"),
     // so it correctly tells the extension to use its own default icon
     // rather than requesting a /nocp/icon route this starter doesn't
     // implement at all. displayMode is hardcoded 'sidebar' — change it if
