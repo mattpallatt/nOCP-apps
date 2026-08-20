@@ -1,0 +1,16 @@
+{
+  "name": "nocp-widget",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "typescript": "^5.5.4",
+    "@types/aws-lambda": "^8.10.145",
+    "@types/node": "^22.0.0",
+    "@aws-sdk/client-dynamodb": "^3.658.0"
+  }
+}
